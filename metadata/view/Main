@@ -1,0 +1,15 @@
+{
+    "type": "navigationview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "designer|userAlias": "mainview",
+        "designer|initialView": true
+    },
+    "id": "ExtBox1-ext-gen2070",
+    "designerId": "a51b7ec1-d7d6-4e48-a6ea-cc2671585207"
+}

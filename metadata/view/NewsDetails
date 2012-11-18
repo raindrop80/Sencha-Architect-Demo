@@ -1,0 +1,36 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NewsDetails",
+        "designer|userAlias": "newsdetailsview",
+        "cls": [
+            "news-details-view"
+        ],
+        "scrollable": "vertical"
+    },
+    "id": "ExtBox1-ext-gen21741",
+    "designerId": "8377bb3b-9576-4f3b-b36c-c473cd2a5d1d",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<p class=\"content\">{content}</p>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "20f18edb-0219-49b1-bb14-e66c2eceb922"
+        }
+    ]
+}

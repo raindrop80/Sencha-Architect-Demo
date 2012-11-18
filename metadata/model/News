@@ -1,0 +1,71 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "News"
+    },
+    "id": "ExtBox1-ext-gen18220",
+    "designerId": "936c1394-eefb-4fcc-bc22-e98d6906b554",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "7230a32a-442a-4ff9-a083-473f98acbbea"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "title",
+                "type": "string"
+            },
+            "designerId": "6f204adc-a5a0-400c-a63a-29ca3e730532"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "content",
+                "type": "string"
+            },
+            "designerId": "70562aab-c556-4c98-81db-3e77cbf9fd42"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field6",
+                "name": "contentSnippet",
+                "type": "string"
+            },
+            "designerId": "5505ee27-8240-49dc-b678-67314d703a78"
+        }
+    ]
+}

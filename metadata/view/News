@@ -1,0 +1,48 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "News",
+        "designer|userClassName": "News",
+        "designer|userAlias": "newsview",
+        "cls": [
+            "news-view"
+        ],
+        "scrollable": null,
+        "store": "News",
+        "onItemDisclosure": true
+    },
+    "id": "ExtBox1-ext-gen19823",
+    "designerId": "07be9c33-4fba-4cc2-a59b-feaa09968475",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "title",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<b>{title}</b>",
+                    "<p class=\"content\">{contentSnippet}</p>",
+                    ""
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "6370c69b-d9ee-4aa9-b9e7-068253011497"
+        }
+    ]
+}

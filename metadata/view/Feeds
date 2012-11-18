@@ -1,0 +1,42 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "Feeds",
+        "designer|userClassName": "Feeds",
+        "designer|userAlias": "feedsview",
+        "store": "Feeds",
+        "onItemDisclosure": true
+    },
+    "id": "ExtBox1-ext-gen10281",
+    "designerId": "dd877428-85f4-4116-b7c4-2d076e952334",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "title",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"name\">{name}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "0f889b71-211e-4560-9b0d-ff56953ef097"
+        }
+    ]
+}

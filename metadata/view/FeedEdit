@@ -1,0 +1,153 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FeedEdit",
+        "designer|userAlias": "feededitview",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen17821",
+    "designerId": "0c72b429-03d4-4378-b84f-6c4e9cc8d04f",
+    "cn": [
+        {
+            "type": "formpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FeedEditForm",
+                "designer|userAlias": "",
+                "designer|displayName": "FeedEditForm"
+            },
+            "designerId": "9d71de9e-fd21-4458-95f0-34285970d0ee",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet1",
+                        "title": "Nome"
+                    },
+                    "designerId": "478e7737-a5bf-4d33-a4df-2342985c6371",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "label": null,
+                                "name": "name"
+                            },
+                            "designerId": "042c380d-6b0c-42d6-8628-63abf6e4b820"
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet1",
+                        "title": "Url"
+                    },
+                    "designerId": "c40c3cfd-0981-4add-a048-016a5ac0d825",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "label": null,
+                                "name": "url",
+                                "placeHolder": "http://feeds.feedburner.com"
+                            },
+                            "designerId": "b32be541-c7bf-497e-a95c-db3d269a1d40"
+                        }
+                    ]
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField",
+                        "name": "id"
+                    },
+                    "designerId": "b036ae09-000a-443c-8843-996013ffafe5"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "save",
+                        "designer|userClassName": "MyButton1",
+                        "height": 50,
+                        "ui": "action",
+                        "text": "Salva"
+                    },
+                    "designerId": "59d3450e-0999-4380-828b-531b7ee9592b",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "delete",
+                        "designer|userClassName": "MyButton1",
+                        "height": 50,
+                        "hidden": true,
+                        "style": "margin-top: 10px;",
+                        "ui": "decline",
+                        "text": "Elimina"
+                    },
+                    "designerId": "868ab31c-3936-4e8d-8590-574f825b31ab",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

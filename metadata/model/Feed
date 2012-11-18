@@ -1,0 +1,133 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Feed"
+    },
+    "id": "ExtBox1-ext-gen11797",
+    "designerId": "b8f12c9b-c8e4-4ea2-996d-e014c0383f5a",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "41d618e4-936e-48ec-9ae4-1557576ed57f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "name",
+                "type": "string"
+            },
+            "designerId": "3a484761-9a29-40bd-972e-ef6d244e69ae"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "url",
+                "type": "string"
+            },
+            "designerId": "0f39e6d0-8daf-4cc4-9ad1-df21a15e23e7"
+        },
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "designer|displayName": "restProxy",
+                "api": [
+                    "{",
+                    "    create: 'api/v1/feeds/new',",
+                    "    read: 'api/v1/feeds/all',",
+                    "    update: 'api/v1/feeds/update',",
+                    "    destroy: 'api/v1/feeds/remove'",
+                    "}"
+                ]
+            },
+            "designerId": "0f6bd873-540f-46fb-a007-f6ec753c2424"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation",
+                "designer|displayName": "nameValidation",
+                "field": "name"
+            },
+            "designerId": "7740bc44-75b1-4e68-b881-ac88c42ba533"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation1",
+                "designer|displayName": "urlValidation",
+                "field": "url"
+            },
+            "designerId": "02fd1fd6-167c-42c7-b142-b0cd81dfc77e"
+        },
+        {
+            "type": "formatvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "matcher": [
+                    "/^http:\\/\\/feeds.feedburner.com\\/.?/"
+                ],
+                "designer|userClassName": "MyFormatValidation",
+                "designer|displayName": "urlFormatValidation",
+                "field": "url"
+            },
+            "configAlternates": {
+                "matcher": "object"
+            },
+            "designerId": "fd12ad2d-e932-48c7-b78a-de2cd9844e82",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "matcher",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

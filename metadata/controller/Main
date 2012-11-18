@@ -1,0 +1,378 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main"
+    },
+    "id": "ExtBox1-ext-gen2478",
+    "designerId": "d091780b-3030-48a4-9cf8-d9e9302a513a",
+    "cn": [
+        {
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showView",
+                "fn": "showView",
+                "designer|params": [
+                    "view"
+                ],
+                "implHandler": [
+                    "this.getMainView().push(view);"
+                ],
+                "name": "showview",
+                "scope": "this"
+            },
+            "designerId": "1853ed82-31e4-4717-a86c-c618c92e9f54"
+        },
+        {
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "back",
+                "fn": "back",
+                "implHandler": [
+                    "this.getMainView().pop();"
+                ],
+                "name": "back",
+                "scope": "this"
+            },
+            "designerId": "14f4b5a6-9181-43a3-9b29-0c04698f51fb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "mainView",
+                "autoCreate": true,
+                "ref": "mainView",
+                "selector": "mainview",
+                "xtype": "mainview"
+            },
+            "designerId": "d6906ff3-62fb-416e-b9cc-3b7f2bded8b7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loginView",
+                "autoCreate": true,
+                "ref": "loginView",
+                "selector": "loginview",
+                "xtype": "loginview"
+            },
+            "designerId": "89225408-ce45-4855-b9ed-083f337a1928"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "var user = window.localStorage.user;",
+                    "",
+                    "if(user){",
+                    "    this.silentlogin(Ext.decode(user));",
+                    "}",
+                    "else {",
+                    "    this.showView(this.getLoginView());",
+                    "}"
+                ]
+            },
+            "designerId": "60c144f9-1dfc-48d2-8818-905a359a46fd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "silentlogin",
+                "fn": "silentlogin",
+                "designer|params": [
+                    "user"
+                ],
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: 'api/v1/users/login',",
+                    "    method: 'POST',",
+                    "    params: {",
+                    "        username: user.username,",
+                    "        password: user.password",
+                    "    },",
+                    "    scope: this,",
+                    "    success: function(response){",
+                    "        this.loginComplete(Ext.decode(response.responseText).user);",
+                    "    },",
+                    "    failure: function(response){",
+                    "        Ext.Msg.alert('Login fallito', 'I parametri di autenticazione non sono stati accettati.');",
+                    "",
+                    "    }",
+                    "});"
+                ]
+            },
+            "designerId": "a6a67a1e-6680-444b-925e-b9a766218ca5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLoginTap",
+                "fn": "onLoginTap",
+                "implHandler": [
+                    "this.getLoginView().submit({",
+                    "    url: 'api/v1/users/login',",
+                    "    method: 'POST',",
+                    "    scope: this,",
+                    "    success: function(form, response){",
+                    "        this.loginComplete (response.user);",
+                    "    },",
+                    "    failure: function(form, response){",
+                    "        Ext.Msg.alert('Login fallito', 'I parametri di autenticazione non sono stati accettati.');",
+                    "    }",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "loginview button[action=login]"
+            },
+            "designerId": "efc49081-8933-45f9-b802-69f6f327e2f3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loginComplete",
+                "fn": "loginComplete",
+                "designer|params": [
+                    "user"
+                ],
+                "implHandler": [
+                    "window.localStorage.user = Ext.encode(user);",
+                    "this.getApplication().fireEvent('showfeeds');",
+                    "this.showLogoutButton();",
+                    "this.showNewFeedButton();"
+                ]
+            },
+            "designerId": "95cb66a6-4ec3-4d29-8d9e-6890acb54707"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showLogoutButton",
+                "fn": "showLogoutButton",
+                "implHandler": [
+                    "this.getMainView().getNavigationBar().add({",
+                    "    xtype: 'button',",
+                    "    action: 'logout',",
+                    "    ui: 'plain',",
+                    "    iconMask: true,",
+                    "    iconCls: 'user'",
+                    "});",
+                    "",
+                    "this.getLogoutButton().show({",
+                    "    type: 'pop'",
+                    "});"
+                ]
+            },
+            "designerId": "a410feef-2e27-4c4f-b1b9-27e7984cd18e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showNewFeedButton",
+                "fn": "showNewFeedButton",
+                "implHandler": [
+                    "this.getMainView().getNavigationBar().add({",
+                    "    xtype: 'button',",
+                    "    action: 'newfeed',",
+                    "    ui: 'action',",
+                    "    text: 'Nuovo',",
+                    "    align: 'right'",
+                    "});",
+                    "",
+                    "this.getNewFeedButton ().show({",
+                    "    type: 'pop'",
+                    "});"
+                ]
+            },
+            "designerId": "3fd7a7a6-57ad-4d1d-ac3d-55c2060ff595"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "hideLogoutButton",
+                "fn": "hideLogoutButton",
+                "implHandler": [
+                    "    this.getLogoutButton().destroy(true);"
+                ]
+            },
+            "designerId": "98fb748e-d056-4701-84a6-d2f0eb147701"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "hideNewFeedButton",
+                "fn": "hideNewFeedButton",
+                "implHandler": [
+                    "this.getNewFeedButton().destroy(true);",
+                    ""
+                ]
+            },
+            "designerId": "214ae2db-071a-4996-97b3-2e988672fff2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "logoutButton",
+                "ref": "logoutButton",
+                "selector": "button[action=logout]"
+            },
+            "designerId": "6e2c5a2c-a796-4bdf-97c0-271a74a417ce"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNavigationviewPush",
+                "fn": "onNavigationviewPush",
+                "implHandler": [
+                    "if(view instanceof RSS.view.News || ",
+                    "   view instanceof RSS.view.FeedEdit){",
+                    "      this.hideLogoutButton();",
+                    "      this.hideNewFeedButton();",
+                    "}"
+                ],
+                "name": "push",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "navigationview"
+            },
+            "designerId": "ef359fac-f166-44f8-90e8-a4ef5c27195c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNavigationviewPop",
+                "fn": "onNavigationviewPop",
+                "implHandler": [
+                    "if(view instanceof RSS.view.News ||",
+                    "   view instanceof RSS.view.FeedEdit){",
+                    "        this.showLogoutButton();",
+                    "        this.showNewFeedButton();",
+                    "}"
+                ],
+                "name": "pop",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "navigationview"
+            },
+            "designerId": "b8d83168-f881-4acb-91d0-a11c6580476a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLogout",
+                "fn": "onLogout",
+                "implHandler": [
+                    "Ext.Msg.confirm('Logout', 'Sei sicuro di voler uscire dall\\'applicazione?', function(btn){",
+                    "    if(btn === 'yes'){",
+                    "        delete window.localStorage.user;",
+                    "        window.location.reload();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[action=logout]"
+            },
+            "designerId": "009c626f-b618-4ba9-8ba8-0c9a38b6a7bc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newFeedButton",
+                "ref": "newFeedButton",
+                "selector": "button[action=newfeed]"
+            },
+            "designerId": "98647b33-497b-4778-bbe3-087758bec8bb"
+        }
+    ]
+}

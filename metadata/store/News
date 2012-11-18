@@ -1,0 +1,54 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "News",
+        "model": "News",
+        "storeId": "News"
+    },
+    "id": "ExtBox1-ext-gen16836",
+    "designerId": "a53720ea-1af4-4fca-b211-78a213dadfbe",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy",
+                "designer|displayName": "JsonPProxy",
+                "extraParams": [
+                    "{",
+                    "    v: '1.0',",
+                    "    num: 100,",
+                    "    q: ''",
+                    "}"
+                ],
+                "url": "https://ajax.googleapis.com/ajax/services/feed/load"
+            },
+            "designerId": "79ecee46-ecae-400b-bae0-d1c33a3c6721",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2",
+                        "designer|displayName": "JsonReader",
+                        "rootProperty": "responseData.feed.entries"
+                    },
+                    "designerId": "9307d106-4ddd-4377-b910-9c4ab4dba199"
+                }
+            ]
+        }
+    ]
+}

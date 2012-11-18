@@ -1,0 +1,300 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Feeds"
+    },
+    "id": "ExtBox1-ext-gen10090",
+    "designerId": "eabdd1e8-11ea-4c6c-9f77-cc3755a3aeed",
+    "cn": [
+        {
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onShowfeeds",
+                "fn": "onShowfeeds",
+                "implHandler": [
+                    "this.getApplication().fireEvent('showview', this.getFeedsView());",
+                    "Ext.getStore('Feeds').load();"
+                ],
+                "name": "showfeeds",
+                "scope": "this"
+            },
+            "designerId": "574df4d5-3775-45bb-a42b-5fb0480eccf1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFeedDisclose",
+                "fn": "onFeedDisclose",
+                "implHandler": [
+                    "var store = Ext.getStore('News');",
+                    "",
+                    "store.getProxy().setExtraParam('q', record.get('url'));",
+                    "",
+                    "store.load({",
+                    "    callback: this.onNewsLoaded,",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "Ext.Viewport.setMasked({",
+                    "    xtype: 'loadmask',",
+                    "    message: 'Caricamento'",
+                    "});"
+                ],
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "feedsview"
+            },
+            "designerId": "eb7f007b-7b8a-439b-a82d-38fc5adaff8d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNewsLoaded",
+                "fn": "onNewsLoaded",
+                "implHandler": [
+                    "Ext.Viewport.setMasked(false);",
+                    "this.getApplication().fireEvent('showview', this.getNewsView());"
+                ]
+            },
+            "designerId": "a9020236-90d6-4836-80b8-2c3bfe7e97c8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "feedsView",
+                "autoCreate": true,
+                "ref": "feedsView",
+                "selector": "feedsview",
+                "xtype": "feedsview"
+            },
+            "designerId": "a6485a96-ebf4-4cf1-9f69-6eb085807017"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newsView",
+                "autoCreate": true,
+                "ref": "newsView",
+                "selector": "newsview",
+                "xtype": "newsview"
+            },
+            "designerId": "a6899f89-8258-442e-9c31-443bd0691a8b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newsDetailsView",
+                "autoCreate": true,
+                "ref": "newsDetailsView",
+                "selector": "newsdetailsview",
+                "xtype": "newsdetailsview"
+            },
+            "designerId": "c7df275c-5a6c-4cc7-92dd-4195d33d19a8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNewsDisclose",
+                "fn": "onNewsDisclose",
+                "implHandler": [
+                    "var view = this.getNewsDetailsView();",
+                    "view.setData(record.getData());",
+                    "this.getApplication().fireEvent('showview', view);"
+                ],
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "newsview"
+            },
+            "designerId": "d4b2c7ec-5877-4bf4-bbd0-67535a76353f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "feedEditView",
+                "autoCreate": true,
+                "ref": "feedEditView",
+                "selector": "feededitview",
+                "xtype": "feededitview"
+            },
+            "designerId": "4abe6113-d84e-49cc-b8c8-44f13f127336"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNewFeedTap",
+                "fn": "onNewFeedTap",
+                "implHandler": [
+                    "this.getApplication().fireEvent('showview', this.getFeedEditView());"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[action=newfeed]"
+            },
+            "designerId": "fb83eae1-5d3b-4d85-8cd4-2e5af2eaa0b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFeedSelected",
+                "fn": "onFeedSelected",
+                "implHandler": [
+                    "var view = this.getFeedEditView(),",
+                    "    form = view.down('formpanel');",
+                    " ",
+                    "form.setRecord(record);",
+                    "",
+                    "this.getApplication().fireEvent('showview', view);",
+                    "this.getDeleteFeedButton().show();"
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "feedsview"
+            },
+            "designerId": "50e0d864-cf41-42e3-9295-4eadc38a7fa9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteFeedButton",
+                "ref": "deleteFeedButton",
+                "selector": "feededitview button[action=delete]"
+            },
+            "designerId": "4b29a409-4bcf-45bb-a75c-22c3422c8bca"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDeleteFeed",
+                "fn": "onDeleteFeed",
+                "implHandler": [
+                    "var me = this;",
+                    "me.getFeedEditView().down('formpanel').getRecord().erase({",
+                    "    success: function(){",
+                    "        Ext.getStore('Feeds').load();",
+                    "        me.getApplication().fireEvent('back');",
+                    "    },",
+                    "    failure: function(){",
+                    "        Ext.Msg.alert('Errore', 'Si è verificato un errore durante l\\'eliminazione del Feed.');",
+                    "    } ",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "feededitview button[action=delete]"
+            },
+            "designerId": "357bdddb-9782-4bbf-8595-4318a0298202"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSaveFeed",
+                "fn": "onSaveFeed",
+                "implHandler": [
+                    "var me = this,",
+                    "    view = me.getFeedEditView(),",
+                    "    form = view.down('formpanel'),",
+                    "    values = form.getValues(),",
+                    "    feed = form.getRecord() || Ext.create('RSS.model.Feed'),",
+                    "    errors;",
+                    "",
+                    "feed.setData(values);",
+                    "",
+                    "errors = feed.validate();",
+                    "",
+                    "if(!errors.length){",
+                    "",
+                    "    feed.save({",
+                    "        success: function() {",
+                    "            Ext.getStore('Feeds').load();",
+                    "            me.getApplication().fireEvent('back');",
+                    "        },",
+                    "        failure: function(){",
+                    "            Ext.Msg.alert('Errore Salvataggio', 'Si è verificato un errore nel salvataggio del Feed.');",
+                    "        }",
+                    "    });",
+                    "}",
+                    "else{",
+                    "",
+                    "    error = errors.first();",
+                    "    Ext.Msg.alert('Feed non valido', Ext.String.format('Errore nel campo \"{0}\":<br/>{1}.', error.getField(), error.getMessage()));",
+                    "",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "feededitview button[action=save]"
+            },
+            "designerId": "81dd154b-4fc5-45e9-910d-4b5806a2b981"
+        }
+    ]
+}

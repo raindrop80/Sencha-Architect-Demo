@@ -1,0 +1,33 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Feed",
+            "News"
+        ],
+        "stores": [
+            "Feeds",
+            "News"
+        ],
+        "views": [
+            "Main",
+            "Login",
+            "Feeds",
+            "News",
+            "NewsDetails",
+            "FeedEdit"
+        ],
+        "name": "RSS",
+        "controllers": [
+            "Main",
+            "Feeds"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1580",
+    "designerId": "application"
+}

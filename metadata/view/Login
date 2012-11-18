@@ -1,0 +1,93 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "Login",
+        "designer|userClassName": "Login",
+        "designer|userAlias": "loginview"
+    },
+    "id": "ExtBox1-ext-gen4414",
+    "designerId": "420d38d3-713e-452f-b01c-9d402f8e6c90",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "title",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "instructions": "Inserisci i parametri di autenticazione, quindi premi il pulsante \"Login\" per autenticarti.' \t•\tAggiungere I due campi username e password",
+                "title": "Autenticazione"
+            },
+            "designerId": "59d7afdb-f0a5-44c5-9f8d-9e93fe095a7a",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "designer|displayName": "Username",
+                        "label": "Username",
+                        "name": "username"
+                    },
+                    "designerId": "4eb6da10-499f-4243-81a1-0afe4461edf7"
+                },
+                {
+                    "type": "passwordfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPasswordField",
+                        "designer|displayName": "Password",
+                        "label": "Password",
+                        "name": "password"
+                    },
+                    "designerId": "49837cab-c545-48eb-a56e-c1ba39f4659e"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "login",
+                "designer|userClassName": "MyButton",
+                "height": 50,
+                "ui": "action",
+                "text": "Login"
+            },
+            "designerId": "9bcd34b6-21fb-4e8e-be73-9b26586c21ab",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

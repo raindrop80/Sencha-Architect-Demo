@@ -1,0 +1,158 @@
+{
+    "name": "Sencha_Architect_Demo",
+    "settings": {
+        "urlPrefix": "http://localhost/Sencha/Presentations/Sencha_Architect_Demo/",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "/Applications/MAMP/htdocs/sencha-touch-2.1.0-gpl",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "c3d92702-bc9d-4bd2-8bbd-5153f9621a7f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "a51b7ec1-d7d6-4e48-a6ea-cc2671585207": {
+            "paths": [
+                "metadata/view/Main",
+                "app/view/override/Main.js",
+                "app/view/Main.js"
+            ],
+            "className": "Main"
+        },
+        "d091780b-3030-48a4-9cf8-d9e9302a513a": {
+            "paths": [
+                "metadata/controller/Main",
+                "app/controller/override/Main.js",
+                "app/controller/Main.js"
+            ],
+            "className": "Main"
+        },
+        "420d38d3-713e-452f-b01c-9d402f8e6c90": {
+            "paths": [
+                "metadata/view/Login",
+                "app/view/override/Login.js",
+                "app/view/Login.js"
+            ],
+            "className": "Login"
+        },
+        "dd877428-85f4-4116-b7c4-2d076e952334": {
+            "paths": [
+                "metadata/view/Feeds",
+                "app/view/override/Feeds.js",
+                "app/view/Feeds.js"
+            ],
+            "className": "Feeds"
+        },
+        "eabdd1e8-11ea-4c6c-9f77-cc3755a3aeed": {
+            "paths": [
+                "metadata/controller/Feeds",
+                "app/controller/override/Feeds.js",
+                "app/controller/Feeds.js"
+            ],
+            "className": "Feeds"
+        },
+        "b8f12c9b-c8e4-4ea2-996d-e014c0383f5a": {
+            "paths": [
+                "metadata/model/Feed",
+                "app/model/override/Feed.js",
+                "app/model/Feed.js"
+            ],
+            "className": "Feed"
+        },
+        "d2c6da0e-3a36-4e8e-a927-d3aa29233968": {
+            "paths": [
+                "metadata/store/Feeds",
+                "app/store/override/Feeds.js",
+                "app/store/Feeds.js"
+            ],
+            "className": "Feeds"
+        },
+        "a53720ea-1af4-4fca-b211-78a213dadfbe": {
+            "paths": [
+                "metadata/store/News",
+                "app/store/override/News.js",
+                "app/store/News.js"
+            ],
+            "className": "News"
+        },
+        "936c1394-eefb-4fcc-bc22-e98d6906b554": {
+            "paths": [
+                "metadata/model/News",
+                "app/model/override/News.js",
+                "app/model/News.js"
+            ],
+            "className": "News"
+        },
+        "07be9c33-4fba-4cc2-a59b-feaa09968475": {
+            "paths": [
+                "metadata/view/News",
+                "app/view/override/News.js",
+                "app/view/News.js"
+            ],
+            "className": "News"
+        },
+        "8377bb3b-9576-4f3b-b36c-c473cd2a5d1d": {
+            "paths": [
+                "metadata/view/NewsDetails",
+                "app/view/override/NewsDetails.js",
+                "app/view/NewsDetails.js"
+            ],
+            "className": "NewsDetails"
+        },
+        "2adc78ef-918a-4448-b0c0-e01514074065": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
+        },
+        "0c72b429-03d4-4378-b84f-6c4e9cc8d04f": {
+            "paths": [
+                "metadata/view/FeedEdit",
+                "app/view/override/FeedEdit.js",
+                "app/view/FeedEdit.js"
+            ],
+            "className": "FeedEdit"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "a51b7ec1-d7d6-4e48-a6ea-cc2671585207",
+            "420d38d3-713e-452f-b01c-9d402f8e6c90",
+            "dd877428-85f4-4116-b7c4-2d076e952334",
+            "07be9c33-4fba-4cc2-a59b-feaa09968475",
+            "8377bb3b-9576-4f3b-b36c-c473cd2a5d1d",
+            "0c72b429-03d4-4378-b84f-6c4e9cc8d04f"
+        ],
+        "store": [
+            "d2c6da0e-3a36-4e8e-a927-d3aa29233968",
+            "a53720ea-1af4-4fca-b211-78a213dadfbe"
+        ],
+        "controller": [
+            "d091780b-3030-48a4-9cf8-d9e9302a513a",
+            "eabdd1e8-11ea-4c6c-9f77-cc3755a3aeed"
+        ],
+        "model": [
+            "b8f12c9b-c8e4-4ea2-996d-e014c0383f5a",
+            "936c1394-eefb-4fcc-bc22-e98d6906b554"
+        ],
+        "resource": [
+            "c3d92702-bc9d-4bd2-8bbd-5153f9621a7f",
+            "2adc78ef-918a-4448-b0c0-e01514074065"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
