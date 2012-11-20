@@ -9,6 +9,9 @@
         "title": "Feeds",
         "designer|userClassName": "Feeds",
         "designer|userAlias": "feedsview",
+        "cls": [
+            "feeds-view"
+        ],
         "store": "Feeds",
         "onItemDisclosure": true
     },

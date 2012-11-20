@@ -124,6 +124,12 @@
                 "app/view/FeedEdit.js"
             ],
             "className": "FeedEdit"
+        },
+        "aace9870-1fff-42b3-8102-b8aca85481aa": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
         }
     },
     "viewOrderMap": {
@@ -149,7 +155,8 @@
         ],
         "resource": [
             "c3d92702-bc9d-4bd2-8bbd-5153f9621a7f",
-            "2adc78ef-918a-4448-b0c0-e01514074065"
+            "2adc78ef-918a-4448-b0c0-e01514074065",
+            "aace9870-1fff-42b3-8102-b8aca85481aa"
         ],
         "app": [
             "application"

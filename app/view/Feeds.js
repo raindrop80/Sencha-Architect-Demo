@@ -21,6 +21,9 @@ Ext.define('RSS.view.Feeds', {
         title: 'Feeds',
         store: 'Feeds',
         onItemDisclosure: true,
+        cls: [
+            'feeds-view'
+        ],
         itemTpl: [
             '<div class="name">{name}</div>'
         ]

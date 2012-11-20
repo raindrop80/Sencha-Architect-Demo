@@ -1,3 +1,5 @@
+$base-color: #00CC33;
+
 @import 'sencha-touch/default/all';
 
 // You may remove any of the following modules that you
@@ -15,5 +17,8 @@
 @include sencha-carousel;
 @include sencha-form;
 @include sencha-msgbox;
+@include sencha-loading-spinner;
+
+@import 'all';
 
 // Your custom code goes here...
